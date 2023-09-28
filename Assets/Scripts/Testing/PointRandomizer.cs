@@ -11,11 +11,11 @@ namespace IA
         [SerializeField] private Vector2[] bounds = new Vector2[2];
         [SerializeField] private float minimumNeighborDistance = 0.5f;
 
-        private List<Vector2> pointPosList = new List<Vector2>();
+        private static List<Vector2> pointPosList = new List<Vector2>();
 
         Vector3[] points;
 
-        private void Start()
+        private void Awake()
         {
             points = new Vector3[8]
             {
@@ -78,7 +78,7 @@ namespace IA
                 Gizmos.DrawSphere(p, 0.07f);
             }
         }
-        public List<Vector2> GetPoints() => pointPosList;
+        public static List<Vector2> GetPoints() => pointPosList;
 
     }
 }

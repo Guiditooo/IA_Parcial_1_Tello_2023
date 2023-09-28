@@ -10,7 +10,12 @@ namespace IA.VORONOI
         public Voronoi(List<VoronoiNode> newPointsList)
         {
             hotSpotList = newPointsList;
-            //
         }
+
+        private void CreateLines()
+        {
+
+        }
+
     }
 }
